@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <title>Information Device</title>
+    <!-- CSS  -->
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon (7).ico" type="image/x-icon">
+    <link rel="icon" href="favicon (7).ico" type="image/x-icon">
+</head>
+
+<body class="Site">
+    <main class="Site-content">
+        <nav class="blue z-depth-5">
+            <div class="nav-wrapper container">
+                <a href="home.html" class="brand-logo">PC News</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                    <i class="blue material-icons">airplay</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="home.html">Accueil</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="information.html">Information Device</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="home.html">Accueil</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="information.html">Information Device</a></li>
+        </ul>
+        <div class="container app">
+            <h1>Device information</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Les infos de votre Device</p>
+            </div>
+            <div>
+                <p id="deviceInfoText"></p>
+            </div>
+        </div>
+        </main>
+        <footer class="page-footer blue">
+
+
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2021 Copyright [KI] TP Cordova Android Formation Softeam Institute
+                </div>
+            </div>
+        </footer>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script src="js/init.js"></script>
+
+        <script type="text/javascript">
+            document.addEventListener("deviceready", function() {
+                var deviceinfo = "cordova:" + device.cordova + "<br>Model:" + device.model + "<br>UUID:" + device.uuid + "<br>Platform:" + device.platform + "(" + device.version + ")";
+                document.getElementById("deviceInfoText").innerHTML = deviceinfo;
+            }, false);
+        </script>
+    </body>
+</html>
