@@ -52,27 +52,27 @@
                 <p id="deviceInfoText"></p>
             </div>
         </div>
-        </main>
-        <footer class="page-footer blue">
+    </main>
+    <footer class="page-footer blue">
 
 
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2021 Copyright [KI] TP Cordova Android Formation Softeam Institute
-                </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2021 Copyright [KI] TP Cordova Android Formation Softeam Institute
             </div>
-        </footer>
-        <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/materialize.min.js"></script>
-        <script src="js/init.js"></script>
+        </div>
+    </footer>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="./js/index.js" asp-append-version="true"></script>
+    <script src="./js/materialize.js"></script>
 
-        <script type="text/javascript">
-            document.addEventListener("deviceready", function() {
-                var deviceinfo = "cordova:" + device.cordova + "<br>Model:" + device.model + "<br>UUID:" + device.uuid + "<br>Platform:" + device.platform + "(" + device.version + ")";
-                document.getElementById("deviceInfoText").innerHTML = deviceinfo;
-            }, false);
-        </script>
-    </body>
+    <script type="text/javascript">
+        document.addEventListener("deviceready", function () {
+            var deviceinfo = "cordova:" + device.cordova + "<br>Model:" + device.model + "<br>UUID:" + device.uuid + "<br>Platform:" + device.platform + "(" + device.version + ")";
+            document.getElementById("deviceInfoText").innerHTML = deviceinfo;
+        }, false);
+    </script>
+</body>
+
 </html>

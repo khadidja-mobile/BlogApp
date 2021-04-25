@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="format-detection" content="telephone=no">
@@ -60,22 +61,82 @@
             </div>
           </div>
         </div>
-       
-        <section id="listeArticles" class="row">
 
-        </section> 
+        <!-- Afficher un article -->
+        <div class="container" id="post">
+          <button id="newPost" class="btn btn- blue">Ajouter un nouvel article</button>
+          <br>
 
-        <section id="articleDetails">
-          <h3 id="libelle">Libellé article</h3>
-          <img id="img1" class="responsive-image" src="" alt="">
-          <p id="description1">description1 article </p>
-          <p id="description2">description1 article </p>
-          <img id="img2" class="responsive-image" src="" alt="">
-          <img id="img3" class="responsive-image" src="" alt="">
+          <section class="row">
+            <h2 id="libelle"></h2>
+            <img id="urlPhotoPr" src="" alt="" class="responsive-image">
+            <p id="description1"></p>
+            <p id="description2"></p>
+            <section class="container">
+              <h4>Nouveautés 2021</h4>
+              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item">
+                    <img id="urlPhotoDetail1" class="d-block w-100" src="" alt="">
+                  </div>
+                  <div class="carousel-item active">
+                    <img id="urlPhotoDetail2" class="d-block w-100" src="" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img id="urlPhotoDetail3" class="d-block w-100" src="" alt="">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <i class="material-icons">skip_previous</i>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <i class="material-icons">play_arrow</i>
+                </a>
+              </div>
+
+
+        </div>
+
+        <!-- Modifier un article -->
+        <div class="container modifier" id="postDetailsPanel">
+          <h5>Modification</h5>
+          <input type="hidden" id="id"><br>
+          <input type="image" id="urlPhotoPr" src=""><br>
+          <input type="text" id="libelle" value=""><br>
+          <input type="text" id="description1" value=""><br>
+          <input type="text" id="description2" value=""><br>
+          <input type="image" id="urlPhotoDetail1" src=""><br>
+          <input type="image" id="urlPhotoDetail2" src=""><br>
+          <input type="image" id="urlPhotoDetail3" src=""><br>
+
+          <div>
+            <button class="btn btn-primary orange" id="backtoSearchPost">Retour</button>
+            <button class="btn btn-primary green" id="savePost">Enregistrer</button>
+            <button class="btn btn-primary red" id="deletePost">Supprimer</button>
+          </div>
+        </div>
+
         </section>
 
-      </div> 
-    </div> 
+
+        <div>
+          <div id="postSearchPanel">
+            <h4>Blog</h4>
+            <button id="newButton" class="btn btn- blue">Ajouter un nouvel article</button>
+            <br>
+            <div id="postListPanel">
+              <section class="row" id="postList">
+                <!-- Ici La liste des articles -->
+              </section>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
 
 
   </main>
@@ -90,9 +151,8 @@
   </footer>
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="cordova.js"></script>
-  <script src="./js/index.js"></script>
-  <script src="./js/materialize.min.js"></script>
-  <script src="./js/init.js"></script>
+  <script src="./js/index.js" asp-append-version="true"></script>
+  <script src="./js/materialize.js"></script>
   <script src="./js/blog.js"></script>
 
 </body>

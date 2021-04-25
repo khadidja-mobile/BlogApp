@@ -1,0 +1,64 @@
+{
+"articles": [
+    {
+    "id": 1,
+    "libelle": "Lenovo Ideapad 330S 15ARR Ultrabook 15 Gris",
+    "description1": "Ryzen 5, RAM 8 Go, 1 To + SSD 128 Go, AMD Radeon Vega 8, Windows 10",
+    "description2": "Ordinateur portable Ideapad 330S-15ARR, écran HD, AMD Ryzen 5 2500U, 8Go RAM, 1TB + 128 Go HDD, Carte graphique intégré, Windows 10.",
+    "urlPhotoPr": "img/pc1_1.jpg",
+    "urlPhotoDetail1": "img/pc1_2.jpg",
+    "urlPhotoDetail2": "img/pc1_3.jpg",
+    "urlPhotoDetail3": "img/pc1_4.jpg"
+    },
+    {
+        "id": 2,
+        "libelle": "Dell Inspiron 14-5480 Ordinateur Portable 14 Full HD IPS Platinum Silver",
+        "description1": "Intel Core i5, 8Go de RAM, SSD 256Go, NVIDIA MX250 2Gb, Windows 10 Home) Clavier AZERTY",
+        "description2": "Ordinateur portable de 14 pouces maniable et élégant. Présente une bordure étroite et un capot en aluminium, le tout dans un design fin.Processeur Intel Core i5 de 8e génération- 1,6 GHz - Turbo : 3,9 GHz, 8 Go DDR4-SDRAM, NVIDIA GeForce MX250, 256 Go SSD, Windows 10 Home",
+        "urlPhotoPr": "img/pc2_1.jpg",
+        "urlPhotoDetail1": "img/pc2_1.jpg",
+        "urlPhotoDetail2": "img/pc2_2.jpg",
+        "urlPhotoDetail3": "img/pc2_3.jpg"
+    },
+    {
+        "id": 3,
+        "libelle": "Asus Vivobook Pro N705FD-GC003T PC portable 17 Gris foncé",
+        "description1": "Intel Core i7, 16 Go de RAM, 1 to + SSD 256 Go, Nvidia GTX 1050 4 Go, Windows 10) Clavier AZERTY",
+        "description2": "Ordinateur portable de 14 pouces maniable et élégant. Présente une bordure étroite et un capot en aluminium, le tout dans un design fin.Processeur Intel Core i5 de 8e génération- 1,6 GHz - Turbo : 3,9 GHz, 8 Go DDR4-SDRAM, NVIDIA GeForce MX250, 256 Go SSD, Windows 10 Home",
+        "urlPhotoPr": "img/pc3_1.jpg",
+        "urlPhotoDetail1": "img/pc3_1.jpg",
+        "urlPhotoDetail2": "img/pc3_2.jpg",
+        "urlPhotoDetail3": "img/pc3_3.jpg"
+    },
+    {
+        "id": 4,
+        "libelle": "HP OMEN 15dc0044nf PC Portable Gaming 15 FHD Noir",
+        "description1": "Intel Core i5, 8 Go de RAM, 1 To + SSD 128 Go,Nvidia GeForce GTX 1050 Ti, Windows 10",
+        "description2": "Ecran : Full HD IPS anti-reflets micro-bords à rétroéclairage WLED de 39,6 cm (15,6) de diagonale (1 920 x 1 080). Type d'alimentation: Adaptateur secteur 150 W Stockage et mémoire : 8 Go de RAM, Hybride (Disque Dur + SSD) 1000 Go + 128 Go Processeur : Intel Core i5-8300H",
+        "urlPhotoPr": "img/pc4_1.jpg",
+        "urlPhotoDetail1": "img/pc4_1.jpg",
+        "urlPhotoDetail2": "img/pc4_2.jpg",
+        "urlPhotoDetail3": "img/pc4_3.jpg"
+    },
+    {
+        "id": 5,
+        "libelle": "Asus Vivobook Pro N705FD-GC003T PC portable 17 Gris foncé",
+        "description1": "Intel Core i7, 16 Go de RAM, 1 to + SSD 256 Go, Nvidia GTX 1050 4 Go, Windows 10) Clavier AZERTY",
+        "description2": "Ordinateur portable de 14 pouces maniable et élégant. Présente une bordure étroite et un capot en aluminium, le tout dans un design fin.Processeur Intel Core i5 de 8e génération- 1,6 GHz - Turbo : 3,9 GHz, 8 Go DDR4-SDRAM, NVIDIA GeForce MX250, 256 Go SSD, Windows 10 Home",
+        "urlPhotoPr": "img/pc2_2.jpg",
+        "urlPhotoDetail1": "img/pc3_1.jpg",
+        "urlPhotoDetail2": "img/pc3_2.jpg",
+        "urlPhotoDetail3": "img/pc3_3.jpg"
+    },
+    {
+        "id": 6,
+        "libelle": "Asus Vivobook Pro N705FD-GC003T PC portable 17 Gris foncé",
+        "description1": "Intel Core i7, 16 Go de RAM, 1 to + SSD 256 Go, Nvidia GTX 1050 4 Go, Windows 10) Clavier AZERTY",
+        "description2": "Ordinateur portable de 14 pouces maniable et élégant. Présente une bordure étroite et un capot en aluminium, le tout dans un design fin.Processeur Intel Core i5 de 8e génération- 1,6 GHz - Turbo : 3,9 GHz, 8 Go DDR4-SDRAM, NVIDIA GeForce MX250, 256 Go SSD, Windows 10 Home",
+        "urlPhotoPr": "img/pc1_4.jpg",
+        "urlPhotoDetail1": "img/pc3_1.jpg",
+        "urlPhotoDetail2": "img/pc3_2.jpg",
+        "urlPhotoDetail3": "img/pc3_3.jpg"
+    }
+]
+}

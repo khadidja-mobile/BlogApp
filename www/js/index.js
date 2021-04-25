@@ -28,4 +28,11 @@ function onDeviceReady() {
     document.getElementById('deviceready').classList.add('ready');
 }
 
+$(document).ready(function () {
+    $('.sidenav').sidenav();
+    $('.carousel').carousel();
+});
+
+
+
 
