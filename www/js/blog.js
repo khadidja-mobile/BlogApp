@@ -2,8 +2,8 @@ var postManager = {
     // Liste articles Blog
     showPostList: function () {
         $.ajax({
-            //url: "http://localhost:5557/articles/", // La ressource ciblée, pour Android utiliser http://10.0.2.2:5557/articles/
-            url: "http://10.0.2.2:5557/articles/",
+            url: "http://localhost:5557/articles/", // La ressource ciblée, pour Android utiliser http://10.0.2.2:5557/articles/
+            //url: "http://10.0.2.2:5557/articles/",
             type: "GET", // Le type de la requête HTTP,
             cache: false, // n'enregistre pas temporairement des copies de données
             dataType: 'json', //  Le type de données à recevoir, ici, du json
@@ -26,19 +26,20 @@ var postManager = {
     showPost: function (id) {
         if (id == null) return;
         $('#postSearchPanel').hide();
+        $('#post').hide();
         $.ajax({
-            //url: "http://localhost:5557/articles/" + id, // La ressource ciblée, pour Android utiliser http://10.0.2.2:5557/articles/
-            url: "http://10.0.2.2:5557/articles/" + id,
+            url: "http://localhost:5557/articles/" + id, // La ressource ciblée, pour Android utiliser http://10.0.2.2:5557/articles/
+            //url: "http://10.0.2.2:5557/articles/" + id,
             type: "GET", // Le type de la requête HTTP,
             cache: false, // n'enregistre pas temporairement des copies de données
             dataType: 'json', //  Le type de données à recevoir, ici, du json
             success: function (article) {
                 console.log(article);
-                $('#post').show();
+                $('#postDetailsPanel').show();
                 $('#id').attr('value', article.id);
-                $('#libelle').text(article.libelle);
-                $('#description1').text(article.description1);
-                $('#description2').text(article.description2);
+                $('#libelle').attr('value', article.libelle);
+                $('#description1').attr(article.description1);
+                $('#description2').attr(article.description2);
                 $('#urlPhotoPr').attr('src', article.urlPhotoPr);
                 $('#urlPhotoDetail1').attr('src', article.urlPhotoDetail1);
                 $('#urlPhotoDetail2').attr('src', article.urlPhotoDetail2);
@@ -53,8 +54,8 @@ var postManager = {
         $('#postSearchPanel').hide();
         $('#post').hide();
         $.ajax({
-            //url: "http://localhost:5557/articles/" + id, // La ressource ciblée, pour Android utiliser http://10.0.2.2:5557/articles/
-            url: "http://10.0.2.2:5557/articles/" + id,
+            url: "http://localhost:5557/articles/" + id, // La ressource ciblée, pour Android utiliser http://10.0.2.2:5557/articles/
+            //url: "http://10.0.2.2:5557/articles/" + id,
             type: "GET", // Le type de la requête HTTP,
             cache: false, // n'enregistre pas temporairement des copies de données
             dataType: 'json', //  Le type de données à recevoir, ici, du json
@@ -119,8 +120,8 @@ var postManager = {
         if (!confirm('Save ?')) return false;
         var requestType = $('#id').val() != '' ? 'PUT' : 'POST';
         $.ajax({
-            //url: "http://localhost:5557/articles/" + $('#id').val(), // La ressource ciblée, pour Android utiliser http://10.0.2.2:5557/articles/
-            url: "http://10.0.2.2:5557/articles/" + $('#id').val(),
+            url: "http://localhost:5557/articles/" + $('#id').val(), // La ressource ciblée, pour Android utiliser http://10.0.2.2:5557/articles/
+            //url: "http://10.0.2.2:5557/articles/" + $('#id').val(),
             type: requestType, // Le type de la requête HTTP,
             data: postManager.collectFieldsValues(), // On passe nos données à l'url
             dataType: 'json', //  Le type de données à recevoir, ici, du json
@@ -139,8 +140,8 @@ var postManager = {
     deletePost: function () {
         if (!confirm('Delete?')) return;
         $.ajax({
-            //url: 'http://localhost:5557/articles/' + $('#id').val(),
-            url: "http://10.0.2.2:5557/articles/" + $('#id').val(),
+            url: 'http://localhost:5557/articles/' + $('#id').val(),
+            //url: "http://10.0.2.2:5557/articles/" + $('#id').val(),
             dataType: 'json',
             type: 'DELETE',
             success: function (result) {
