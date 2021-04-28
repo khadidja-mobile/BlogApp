@@ -26,7 +26,8 @@ var postManager = {
     showPost: function (id) {
         if (id == null) return;
         $('#postSearchPanel').hide();
-        $('#post').hide();
+        $('#postDetailsPanel').hide();
+        $('#post').show();
         $.ajax({
             url: "http://localhost:5557/articles/" + id, // La ressource ciblée, pour Android utiliser http://10.0.2.2:5557/articles/
             //url: "http://10.0.2.2:5557/articles/" + id,
@@ -35,11 +36,10 @@ var postManager = {
             dataType: 'json', //  Le type de données à recevoir, ici, du json
             success: function (article) {
                 console.log(article);
-                $('#postDetailsPanel').show();
                 $('#id').attr('value', article.id);
-                $('#libelle').attr('value', article.libelle);
-                $('#description1').attr(article.description1);
-                $('#description2').attr(article.description2);
+                $('#libelle').text(article.libelle).focus();
+                $('#description1').text(article.description1);
+                $('#description2').text(article.description2);
                 $('#urlPhotoPr').attr('src', article.urlPhotoPr);
                 $('#urlPhotoDetail1').attr('src', article.urlPhotoDetail1);
                 $('#urlPhotoDetail2').attr('src', article.urlPhotoDetail2);
@@ -57,21 +57,22 @@ var postManager = {
             url: "http://localhost:5557/articles/" + id, // La ressource ciblée, pour Android utiliser http://10.0.2.2:5557/articles/
             //url: "http://10.0.2.2:5557/articles/" + id,
             type: "GET", // Le type de la requête HTTP,
-            cache: false, // n'enregistre pas temporairement des copies de données
+            cache: true, // n'enregistre pas temporairement des copies de données
             dataType: 'json', //  Le type de données à recevoir, ici, du json
-            success: function (post) {
+            success: function (article) {
                 //var post = jQuery.parseJSON(article);
-                console.log(post);
+                console.log(article);
 
                 $('#postDetailsPanel').show();
-                $('#id').attr('value', post.id);
-                $('#libelle').attr('value', post.libelle);
-                $('#description1').attr('value', post.description1);
-                $('#description2').attr('value', post.description2);
-                $('#urlPhotoPr').attr('src', post.urlPhotoPr);
-                $('#urlPhotoDetail1').attr('src', post.urlPhotoDetail1);
-                $('#urlPhotoDetail2').attr('src', post.urlPhotoDetail2);
-                $('#urlPhotoDetail3').attr('src', post.urlPhotoDetail3);
+                $('#id').attr('value', article.id);
+                $('#libelle_input').attr('value', article.libelle);
+                $('#description1_input').attr('value', article.description1);
+                $('#description2_input').attr('value', article.description2);
+                $('#urlPhotoPr_input').attr('src', article.urlPhotoPr);
+                $('#urlPhotoDetail1_input').attr('src', article.urlPhotoDetail1);
+                $('#urlPhotoDetail2_input').attr('src', article.urlPhotoDetail2);
+                $('#urlPhotoDetail3_input').attr('src', article.urlPhotoDetail3);
+                $("#post").append("<button class=\"btn btn-primary blue\" onclick=\"postManager.editPost(\'" + article.id + "\');\" >Modifier</button>");
             }
         });
     },
@@ -80,7 +81,7 @@ var postManager = {
         $('#postDetailsPanel').hide();
         $('#postSearchPanel').hide();
         $('#post').show();
-        $('#postList').focus();
+        $('#postList').show();
     },
 
     collectFieldsValues: function () {
@@ -106,13 +107,14 @@ var postManager = {
         $('#post').hide();
         $('#postDetailsPanel').show();
         $('#id').attr('value', null);
-        $('#libelle').attr('value', '').focus().select();
-        $('#description1').attr('value', '');
-        $('#description2').attr('value', '');
-        $('#urlPhotoPr').attr('src', '');
-        $('#urlPhotoDetail1').attr('src', '');
-        $('#urlPhotoDetail2').attr('src', '');
-        $('#urlPhotoDetail3').attr('src', '');
+        $('#libelle_input').attr('value', '').focus().select();
+        $('#description1_input').attr('value', '');
+        $('#description2_input').attr('value', '');
+        $('#urlPhotoPr_input').attr('src', '');
+        $('#urlPhotoPr_input').attr('src', '');
+        $('#urlPhotoDetail1_input').attr('src', '');
+        $('#urlPhotoDetail2_input').attr('src', '');
+        $('#urlPhotoDetail3_input').attr('src', '');
 
     },
 

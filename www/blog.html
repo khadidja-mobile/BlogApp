@@ -73,7 +73,7 @@
             <p id="description1"></p>
             <p id="description2"></p>
             <section class="container">
-              <h4>Nouveautés 2021</h4>
+              <h4>Gallerie photos</h4>
               <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item">
@@ -95,21 +95,21 @@
                   <i class="material-icons">play_arrow</i>
                 </a>
               </div>
-
-              
         </div>
+
+      </section>
 
         <!-- Modifier un article -->
         <div class="container modifier" id="postDetailsPanel">
-          <h5>Modification</h5>
+          <h5>Nouvel article</h5>
           <input type="hidden" id="id"><br>
-          <input type="image" id="urlPhotoPr" src=""><br>
-          <input type="text" id="libelle" value=""><br>
-          <input type="text" id="description1" value=""><br>
-          <input type="text" id="description2" value=""><br>
-          <input type="image" id="urlPhotoDetail1" value=""><br>
-          <input type="image" id="urlPhotoDetail2" vlaue=""><br>
-          <input type="image" id="urlPhotoDetail3" value=""><br>
+          <input type="file" id="urlPhotoPr_input" accept=".jpg, .jpeg, .png"><br>
+          <input type="text" id="libelle_input"><br>
+          <input type="text" id="description1_input"><br>
+          <input type="text" id="description2_input"><br>
+          <input type="file" id="urlPhotoDetail1_input" accept=".jpg, .jpeg, .png"><br>
+          <input type="file" id="urlPhotoDetail2_input" accept=".jpg, .jpeg, .png"><br>
+          <input type="file" id="urlPhotoDetail3_input" accept=".jpg, .jpeg, .png"><br>
 
           <div>
             <button class="btn btn-primary orange" id="backtoSearchPost">Retour</button>
@@ -118,15 +118,11 @@
           </div>
         </div>
 
-      </section>
-
 
 
         <div>
           <div id="postSearchPanel">
             <h4>Blog</h4>
-            <button id="newButton" class="btn btn- blue">Ajouter un nouvel article</button>
-            <br>
             <div id="postListPanel">
               <section class="row" id="postList">
                 <!-- Ici La liste des articles -->
